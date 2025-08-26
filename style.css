@@ -1,0 +1,89 @@
+/* Base CSS styling */
+:root{
+    --main-colour: white;
+    --accent-colour: DodgerBlue;
+    --complementary-colour: black;
+    --main-bg-colour: var(--main-colour);
+    --main-text-colour: black;
+}
+
+html{
+    font-size: 1.5vw;
+    color: var(--main-text-colour);
+}
+
+.body-section{
+    padding: 5vw;
+}
+
+/* Nav-bar styling */
+.nav-bar{
+    height: 3em;
+    position: sticky; /* Set the navbar to fixed position */    
+    top: 0; /* Position the navbar at the top of the page */
+    padding-left: 1vw;
+    padding-right: 2vw;
+    display: flex;
+    flex-flow: row;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar > div:nth-child(2){
+    flex-grow: 2;
+}
+
+.nav-link {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.nav-left {
+}
+
+.nav-main {
+    /*
+     * Use another flex-box to align the content.
+     * Would also work with:
+     * text-align: center;
+     */
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.nav-right {
+}
+
+/* About me section */
+.aboutme-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 5px 50px;
+}
+
+.aboutme {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2em;
+}
+
+.aboutme > div:nth-child(1) {
+    flex-grow: 2;
+}
+
+/* Under construction section */
+.under-construction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.under-construction h1 {
+    font-size: 3rem;
+    font-style: italic;
+    color: red;
+}
