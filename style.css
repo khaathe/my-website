@@ -1,89 +1,326 @@
-/* Base CSS styling */
-:root{
-    --main-colour: white;
-    --accent-colour: DodgerBlue;
-    --complementary-colour: black;
-    --main-bg-colour: var(--main-colour);
-    --main-text-colour: black;
+/* Import theme */
+@import url("theme/ice-blue/light.css");
+@import url("theme/ice-blue/dark.css");
+
+/* css classes */
+html{
+    font-family: "Roboto", sans-serif, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12pt;
+    color: var(--md-sys-color-on-background);
+    background-color: var(--md-sys-color-background);
 }
 
-html{
-    font-size: 1.5vw;
-    color: var(--main-text-colour);
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* multi-classes selectors */
+/* insert here in case these are needed */
+
+/* dynamic and state rules (hover, active, ...) */
+/* insert here in case these are needed */
+
+/*******************************************************************************
+* General rules
+*******************************************************************************/
+/* css classes */
+.section-title {
+    color: var(--md-sys-color-primary);
+}
+
+.section-subtitle {
+    color: var(--md-sys-color-secondary);
 }
 
 .body-section{
-    padding: 5vw;
+    padding: 15px 5vw 15px 5vw;
 }
 
-/* Nav-bar styling */
+.card {
+    box-shadow: 4px 4px 8px var(--md-sys-color-shadow);
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* multi-classes selectors */
+/* insert here in case these are needed */
+
+/* dynamic and state rules (hover, active, ...) */
+/* insert here in case these are needed */
+
+/*******************************************************************************
+* Nav-bar
+*******************************************************************************/
+/* css classes */
 .nav-bar{
-    height: 3em;
     position: sticky; /* Set the navbar to fixed position */    
     top: 0; /* Position the navbar at the top of the page */
-    padding-left: 1vw;
-    padding-right: 2vw;
+    padding: 2vw 2vw 1vw 1vw;
+    justify-content: space-between;
     display: flex;
     flex-flow: row;
     gap: 1em;
-    justify-content: center;
+    align-items: center;
+    background: var(--md-sys-color-primary);
+}
+
+.nav-main {
+    display: flex;
     align-items: center;
 }
 
-.nav-bar > div:nth-child(2){
-    flex-grow: 2;
+.nav-left, .nav-main, .nav-right {
+    height: inherit;
+    justify-content: center;
+    align-content: center;
 }
 
 .nav-link {
     font-style: normal;
+}
+
+.nav-title {
+    font-size: 1.4rem;
+}
+
+.nav-button{
+    border: none;
+    cursor: pointer;
+    background: none;
+    border-radius: 100%;
+}
+
+/* multi-classes selectors */
+.nav-link, .nav-button, .nav-title {
+    color: var(--md-sys-color-on-primary);
     text-decoration: none;
 }
 
-.nav-left {
+.nav-main .nav-link{
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px;
 }
 
-.nav-main {
-    /*
-     * Use another flex-box to align the content.
-     * Would also work with:
-     * text-align: center;
-     */
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    gap: 1.5em;
+/* dynamic and state rules (hover, active, ...) */
+.nav-bar > div:nth-child(2){
+    flex-grow: 2;
 }
 
-.nav-right {
+.nav-button:hover{
+    color: var(--md-sys-color-on-primary-container);
+    background-color: var(--md-sys-color-primary-container);
 }
 
-/* About me section */
-.aboutme-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 5px 50px;
+.nav-link:hover{
+    color: var(--md-sys-color-on-primary-container);
+    background-color: var(--md-sys-color-primary-container);
 }
 
+.nav-bar .nav-button:last-child {display: none;}
+
+@media screen and (max-width: 800px){
+    .nav-bar .nav-link { display: none; }
+    .nav-bar .nav-button:not(:last-child) { display: none; }
+    .nav-bar .nav-button:last-child { display: block; }
+
+    .nav-bar.nav-bar.compact {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .nav-bar.compact .nav-main{
+        display: flex;
+        flex-flow: column;
+    }
+
+    .nav-bar.compact .nav-link{
+        display: block;
+    }
+
+    .nav-bar.compact .nav-button{
+        display: block;
+    }
+}
+
+/*******************************************************************************
+* About me
+*******************************************************************************/
+/* css classes */
 .aboutme {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 2em;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    column-gap: 5px 50px;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    border-radius: 25px;
+    padding: 15px 15px 15px 15px;
 }
 
+.aboutme-main {
+    padding: 6px;
+    padding-right: 12px;
+}
+
+.aboutme-right {
+    display: flex;
+    justify-content: right;
+}
+
+.aboutme-title {
+    color: var(--md-sys-color-on-primary);
+}
+
+/* Used in html, use this for styling the description in 'aboutme' */
+/* .aboutme-description {} */
+
+.aboutme-picture {
+    border-radius: 100%;
+}
+
+/* multi-classes selectors */
+/* insert here in case these are needed */
+
+/* dynamic and state rules (hover, active, ...) */
 .aboutme > div:nth-child(1) {
     flex-grow: 2;
 }
 
-/* Under construction section */
-.under-construction {
+/*******************************************************************************
+* Research
+*******************************************************************************/
+/* css classes */
+.background-list {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-flow: column;
+    row-gap: 25px;
+}
+.background-item {
+    padding: 15px 15px 15px 15px;
+    background-color: var(--md-sys-color-surface-bright);
+    color: var(--md-sys-color-on-surface-container);
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
+}
+.job-info {
+    display: block;
+}
+.job-date {
+    float: left;
+}
+.job-location {
+    float: right;
 }
 
-.under-construction h1 {
-    font-size: 3rem;
-    font-style: italic;
-    color: red;
+.interest-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.interest-item {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px;
+    max-width: 40%;
+    background-color: var(--md-sys-color-surface-bright);
+    color: var(--md-sys-color-on-surface-container);
+}
+
+/* multi-classes selectors */
+.job-title, .interest-title {
+    color: var(--md-sys-color-tertiary);
+}
+
+.job-desc, .interest-desc {
+    display: inline;
+}
+
+
+/* dynamic and state rules (hover, active, ...) */
+/* insert here in case these are needed */
+
+/*******************************************************************************
+* Skills
+*******************************************************************************/
+/* css classes */
+.skill-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.skill-item {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px;
+    max-width: 40%;
+    background-color: var(--md-sys-color-surface-bright);
+    color: var(--md-sys-color-on-surface-container);
+}
+
+.skill-title {
+    color: var(--md-sys-color-tertiary);
+}
+
+/* multi-classes selectors */
+/* insert here in case these are needed */
+
+/* dynamic and state rules (hover, active, ...) */
+/* insert here in case these are needed */
+
+/*******************************************************************************
+* Contact
+*******************************************************************************/
+/* css classes */
+.contact-list {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    color: var(--md-sys-color-on-secondary-container);
+    background-color: var(--md-sys-color-secondary-container);
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    padding: 15px 15px 15px 15px;
+}
+
+.contact-item {
+    font-size: 26pt;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+/* multi-classes selectors */
+.contact-list a {
+    color: var(--md-sys-color-on-secondary-container);
+    text-decoration: none;
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* dynamic and state rules (hover, active, ...) */
+.contact-item a:hover {
+    color: var(--md-sys-color-on-primary);
+    background-color: var(--md-sys-color-primary);
 }
