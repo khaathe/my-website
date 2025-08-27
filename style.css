@@ -4,6 +4,8 @@
     --primary-colour: #4682B4;
     --primary-bg-colour: #ffffff;
     --primary-text-colour: #000000;
+    --primary-bg-onhover-colour: #2d5372;
+    --primary-text-onhover-colour: #ffffff;
     /* Define secondary colours */
     --secondary-colour: white;
     --secondary-bg-colour: #FFF5EE;
@@ -39,6 +41,7 @@ body {
     top: 0; /* Position the navbar at the top of the page */
     padding-left: 2vw;
     padding-right: 2vw;
+    justify-content: space-between;
     display: flex;
     flex-flow: row;
     gap: 1em;
@@ -50,19 +53,20 @@ body {
     flex-grow: 2;
 }
 
-.nav-link, .nav-button, .nav-title {
-    color: var(--primary-colour);
+.nav-main {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left, .nav-main, .nav-right {
+    height: inherit;
+    justify-content: center;
+    align-content: center;
 }
 
 .nav-link {
     font-style: normal;
     text-decoration: none;
-}
-
-.nav-left, .nav-right {
-    height: inherit;
-    justify-content: center;
-    align-content: center;
 }
 
 /* Title on the left side of the nav bar */
@@ -76,22 +80,27 @@ body {
     cursor: pointer;
 }
 
+.nav-link, .nav-button, .nav-title {
+    color: var(--primary-colour);
+}
+
+.nav-main .nav-link{
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.nav-main .nav-link:hover{
+    color: var(--primary-text-onhover-colour);
+    background-color: var(--primary-bg-onhover-colour);
+}
+
+/* Sizing for material icons */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
-
-.nav-main {
-    /*
-     * Use another flex-box to align the content.
-     * Would also work with:
-     * text-align: center;
-     */
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    gap: 1.5em;
-}
 
 /* About me section */
 .aboutme-grid {
