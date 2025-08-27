@@ -1,37 +1,57 @@
 /* Base CSS styling */
 :root{
-    --main-colour: white;
+    /* Define primary colours */
+    --primary-colour: #4682B4;
+    --primary-bg-colour: #ffffff;
+    --primary-text-colour: #000000;
+    /* Define secondary colours */
+    --secondary-colour: white;
+    --secondary-bg-colour: #FFF5EE;
+    --secondary-text-colour: #000000;
+    /* Define tertiary colours */
+    --tertiary-colour: white;
+    --tertiary-bg-colour: #FFF5EE;
+    --tertiary-text-colour: #000000;
+    /* Define accent colour */
     --accent-colour: DodgerBlue;
-    --complementary-colour: black;
-    --main-bg-colour: var(--main-colour);
-    --main-text-colour: black;
 }
 
 html{
-    font-size: 1.5vw;
-    color: var(--main-text-colour);
+    font-family: "Roboto", sans-serif, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12pt;
+    color: var(--primary-text-colour);
 }
 
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Style each section in the body */
 .body-section{
     padding: 5vw;
 }
 
 /* Nav-bar styling */
 .nav-bar{
-    height: 3em;
+    height: 5vw;
     position: sticky; /* Set the navbar to fixed position */    
     top: 0; /* Position the navbar at the top of the page */
-    padding-left: 1vw;
+    padding-left: 2vw;
     padding-right: 2vw;
     display: flex;
     flex-flow: row;
     gap: 1em;
-    justify-content: center;
     align-items: center;
+    background: var(--primary-bg-colour);
 }
 
 .nav-bar > div:nth-child(2){
     flex-grow: 2;
+}
+
+.nav-link, .nav-button, .nav-title {
+    color: var(--primary-colour);
 }
 
 .nav-link {
@@ -39,8 +59,27 @@ html{
     text-decoration: none;
 }
 
-.nav-left {
+.nav-left, .nav-right {
+    height: inherit;
+    justify-content: center;
+    align-content: center;
 }
+
+/* Title on the left side of the nav bar */
+.nav-title {
+    font-size: 1.4rem;
+}
+
+.nav-button{
+    background-color: var(--primary-bg-colour);
+    border: none;
+    cursor: pointer;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
 .nav-main {
     /*
@@ -52,9 +91,6 @@ html{
     flex-flow: row;
     justify-content: center;
     gap: 1.5em;
-}
-
-.nav-right {
 }
 
 /* About me section */
@@ -72,18 +108,4 @@ html{
 
 .aboutme > div:nth-child(1) {
     flex-grow: 2;
-}
-
-/* Under construction section */
-.under-construction {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.under-construction h1 {
-    font-size: 3rem;
-    font-style: italic;
-    color: red;
 }
