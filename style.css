@@ -103,18 +103,34 @@ body {
 .material-icons.md-48 { font-size: 48px; }
 
 /* About me section */
-.aboutme-grid {
+.aboutme {
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 5px 50px;
-}
-
-.aboutme {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 2em;
+    border-bottom: 1px solid var(--primary-colour);
+    border-left: 2vw solid var(--primary-colour);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
 .aboutme > div:nth-child(1) {
     flex-grow: 2;
+}
+
+.aboutme-main {
+    padding: 6px;
+    padding-right: 12px;
+}
+
+.aboutme-right {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutme-title {
+    color: var(--primary-colour);
+}
+
+.aboutme-description {
+    color: var(--primary-text-colour);
 }
