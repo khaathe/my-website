@@ -34,6 +34,10 @@ body {
     padding: 5vw;
 }
 
+.section-title {
+    color: var(--primary-colour);
+}
+
 /* Nav-bar styling */
 .nav-bar{
     height: 5vw;
@@ -105,12 +109,8 @@ body {
 /* About me section */
 .aboutme {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 6fr 4fr;
     column-gap: 5px 50px;
-    border-bottom: 1px solid var(--primary-colour);
-    border-left: 2vw solid var(--primary-colour);
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
 }
 
 .aboutme > div:nth-child(1) {
