@@ -255,7 +255,29 @@ body {
 * Skills
 *******************************************************************************/
 /* css classes */
-/* insert here in case these are needed */
+.skill-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.skill-item {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px;
+    max-width: 40%;
+    background-color: var(--md-sys-color-surface-bright);
+    color: var(--md-sys-color-on-surface-container);
+}
+
+.skill-title {
+    color: var(--md-sys-color-tertiary);
+}
 
 /* multi-classes selectors */
 /* insert here in case these are needed */
