@@ -2,9 +2,6 @@
 @import url("theme/ice-blue/light.css");
 @import url("theme/ice-blue/dark.css");
 
-/*******************************************************************************
-* General rules
-*******************************************************************************/
 /* css classes */
 html{
     font-family: "Roboto", sans-serif, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -18,7 +15,28 @@ body {
     margin: 0px;
 }
 
-/* Sizing for material icons */
+/* multi-classes selectors */
+/* insert here in case these are needed
+
+/* dynamic and state rules (hover, active, ...) */
+/* insert here in case these are needed
+
+/*******************************************************************************
+* General rules
+*******************************************************************************/
+/* css classes */
+.section-title {
+    color: var(--md-sys-color-primary);
+}
+
+.body-section{
+    padding: 5vw;
+}
+
+.card {
+    box-shadow: 4px 4px 8px var(--md-sys-color-shadow);
+}
+
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
@@ -29,17 +47,6 @@ body {
 
 /* dynamic and state rules (hover, active, ...) */
 /* insert here in case these are needed
-
-/*******************************************************************************
-* Section
-*******************************************************************************/
-.section-title {
-    color: var(--md-sys-color-primary);
-}
-
-.body-section{
-    padding: 5vw;
-}
 
 /*******************************************************************************
 * Nav-bar
@@ -145,6 +152,10 @@ body {
     display: grid;
     grid-template-columns: 6fr 4fr;
     column-gap: 5px 50px;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    border-radius: 25px;
+    padding: 15px 15px 15px 15px;
 }
 
 .aboutme-main {
@@ -154,15 +165,19 @@ body {
 
 .aboutme-right {
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 
 .aboutme-title {
-    /* color: var(--md-sys-color-primary); */
+    color: var(--md-sys-color-on-primary);
 }
 
 .aboutme-description {
     /* color: var(--md-sys-color-on-primary); */
+}
+
+.aboutme-picture {
+    border-radius: 100%;
 }
 
 /* multi-classes selectors */
