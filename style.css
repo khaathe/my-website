@@ -172,9 +172,8 @@ body {
     color: var(--md-sys-color-on-primary);
 }
 
-.aboutme-description {
-    /* color: var(--md-sys-color-on-primary); */
-}
+/* Used in html, use this for styling the description in 'aboutme' */
+/* .aboutme-description {} */
 
 .aboutme-picture {
     border-radius: 100%;
