@@ -2,6 +2,10 @@
 @import url("theme/ice-blue/light.css");
 @import url("theme/ice-blue/dark.css");
 
+/*******************************************************************************
+* General rules
+*******************************************************************************/
+/* css classes */
 html{
     font-family: "Roboto", sans-serif, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 12pt;
@@ -14,16 +18,33 @@ body {
     margin: 0px;
 }
 
-/* Style each section in the body */
-.body-section{
-    padding: 5vw;
-}
+/* Sizing for material icons */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
+/* multi-classes selectors */
+/* insert here in case these are needed
+
+/* dynamic and state rules (hover, active, ...) */
+/* insert here in case these are needed
+
+/*******************************************************************************
+* Section
+*******************************************************************************/
 .section-title {
     color: var(--md-sys-color-primary);
 }
 
-/* Nav-bar styling */
+.body-section{
+    padding: 5vw;
+}
+
+/*******************************************************************************
+* Nav-bar
+*******************************************************************************/
+/* css classes */
 .nav-bar{
     height: 5vw;
     position: sticky; /* Set the navbar to fixed position */    
@@ -36,10 +57,6 @@ body {
     gap: 1em;
     align-items: center;
     background: var(--md-sys-color-primary);
-}
-
-.nav-bar > div:nth-child(2){
-    flex-grow: 2;
 }
 
 .nav-main {
@@ -57,7 +74,6 @@ body {
     font-style: normal;
 }
 
-/* Title on the left side of the nav bar */
 .nav-title {
     font-size: 1.4rem;
 }
@@ -69,6 +85,7 @@ body {
     border-radius: 100%;
 }
 
+/* multi-classes selectors */
 .nav-link, .nav-button, .nav-title {
     color: var(--md-sys-color-on-primary);
     text-decoration: none;
@@ -81,6 +98,11 @@ body {
     padding: 8px;
 }
 
+/* dynamic and state rules (hover, active, ...) */
+.nav-bar > div:nth-child(2){
+    flex-grow: 2;
+}
+
 .nav-button:hover{
     color: var(--md-sys-color-on-primary-container);
     background-color: var(--md-sys-color-primary-container);
@@ -91,21 +113,14 @@ body {
     background-color: var(--md-sys-color-primary-container);
 }
 
-/* Sizing for material icons */
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-
-/* About me section */
+/*******************************************************************************
+* About me
+*******************************************************************************/
+/* css classes */
 .aboutme {
     display: grid;
     grid-template-columns: 6fr 4fr;
     column-gap: 5px 50px;
-}
-
-.aboutme > div:nth-child(1) {
-    flex-grow: 2;
 }
 
 .aboutme-main {
@@ -125,3 +140,47 @@ body {
 .aboutme-description {
     /* color: var(--md-sys-color-on-primary); */
 }
+
+/* multi-classes selectors */
+/* insert here in case these are needed
+
+/* dynamic and state rules (hover, active, ...) */
+.aboutme > div:nth-child(1) {
+    flex-grow: 2;
+}
+
+/*******************************************************************************
+* Research
+*******************************************************************************/
+/* css classes */
+/* insert here in case these are needed
+
+/* multi-classes selectors */
+/* insert here in case these are needed
+
+/* dynamic and state rules (hover, active, ...) */
+/* insert here in case these are needed
+
+/*******************************************************************************
+* Skills
+*******************************************************************************/
+/* css classes */
+/* insert here in case these are needed
+
+/* multi-classes selectors */
+/* insert here in case these are needed
+
+/* dynamic and state rules (hover, active, ...) */
+/* insert here in case these are needed
+
+/*******************************************************************************
+* Contact
+*******************************************************************************/
+/* css classes */
+/* insert here in case these are needed
+
+/* multi-classes selectors */
+/* insert here in case these are needed
+
+/* dynamic and state rules (hover, active, ...) */
+/* insert here in case these are needed
