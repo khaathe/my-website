@@ -30,9 +30,12 @@ function toggleNavbar() {
  */
 function toggleLightDarkMode(){
     const hmtlTag = document.getElementsByTagName("html")[0];
+    const navThemeIcon = document.getElementById("nav-theme-icon")
     if (hmtlTag.className === "light") {
         hmtlTag.className = "dark"
+        navThemeIcon.innerHTML = "dark_mode"
     } else {
         hmtlTag.className = "light"
+        navThemeIcon.innerHTML = "light_mode"
     }
 }
