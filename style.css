@@ -29,8 +29,12 @@ body {
     color: var(--md-sys-color-primary);
 }
 
+.section-subtitle {
+    color: var(--md-sys-color-secondary);
+}
+
 .body-section{
-    padding: 5vw;
+    padding: 15px 5vw 15px 5vw;
 }
 
 .card {
@@ -191,7 +195,34 @@ body {
 * Research
 *******************************************************************************/
 /* css classes */
-/* insert here in case these are needed
+.background-list {
+    display: flex;
+    flex-flow: column;
+    row-gap: 25px;
+}
+.background-item {
+    padding: 15px 15px 15px 15px;
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface-container);
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
+}
+.job-title {
+    font-size: larger;
+}
+.job-info {
+    display: block;
+}
+.job-date {
+    float: left;
+}
+.job-location {
+    float: right;
+}
+.job-desc {
+    display: inline;
+}
 
 /* multi-classes selectors */
 /* insert here in case these are needed
