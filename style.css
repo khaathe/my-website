@@ -46,11 +46,9 @@ body {
 *******************************************************************************/
 /* css classes */
 .nav-bar{
-    height: 5vw;
     position: sticky; /* Set the navbar to fixed position */    
     top: 0; /* Position the navbar at the top of the page */
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding: 2vw 2vw 1vw 1vw;
     justify-content: space-between;
     display: flex;
     flex-flow: row;
@@ -111,6 +109,32 @@ body {
 .nav-link:hover{
     color: var(--md-sys-color-on-primary-container);
     background-color: var(--md-sys-color-primary-container);
+}
+
+.nav-bar .nav-button:last-child {display: none;}
+
+@media screen and (max-width: 800px){
+    .nav-bar .nav-link { display: none; }
+    .nav-bar .nav-button:not(:last-child) { display: none; }
+    .nav-bar .nav-button:last-child { display: block; }
+
+    .nav-bar.nav-bar.compact {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .nav-bar.compact .nav-main{
+        display: flex;
+        flex-flow: column;
+    }
+
+    .nav-bar.compact .nav-link{
+        display: block;
+    }
+
+    .nav-bar.compact .nav-button{
+        display: block;
+    }
 }
 
 /*******************************************************************************

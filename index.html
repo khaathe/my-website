@@ -18,20 +18,24 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-            </head>
-    <nav class="nav-bar">
+         <script src="main.js"></script> 
+    </head>
+    <nav id="nav-bar" class="nav-bar">
         <div class="nav-left">
             <a class="nav-title" href="/">Kévin SPINICCI</a>
         </div>
         <div class="nav-main">
-            <a class="nav-link" href="#aboutme" title="Details about me an my interest.">About me</a>
-            <a class="nav-link" href="#research">Research</a>
-            <a class="nav-link" href="#skills">Skills</a>
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" onclick="toggleNavbar()" href="#aboutme" title="Details about me an my interest.">About me</a>
+            <a class="nav-link" onclick="toggleNavbar()" href="#research">Research</a>
+            <a class="nav-link" onclick="toggleNavbar()" href="#skills">Skills</a>
+            <a class="nav-link" onclick="toggleNavbar()" href="#contact">Contact</a>
         </div>
         <div class="nav-right">
             <button class="nav-button">
                 <i class="material-symbols-outlined material-icons md-36">brightness_6</i>
+            </button>
+            <button class="nav-button" onclick="toggleNavbar()">
+                <i id="nav-toggle-icon" class="material-symbols-outlined material-icons md-36">menu</i>
             </button>
         </div>
     </nav>
