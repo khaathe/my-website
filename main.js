@@ -24,3 +24,15 @@ function toggleNavbar() {
         navToggleIcon.innerHTML = "menu"
     }
 }
+
+/**
+ * Function to switch between light and dark theme.
+ */
+function toggleLightDarkMode(){
+    const hmtlTag = document.getElementsByTagName("html")[0];
+    if (hmtlTag.className === "light") {
+        hmtlTag.className = "dark"
+    } else {
+        hmtlTag.className = "light"
+    }
+}
