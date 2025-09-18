@@ -1,27 +1,12 @@
-/* Base CSS styling */
-:root{
-    /* Define primary colours */
-    --primary-colour: #4682B4;
-    --primary-bg-colour: #ffffff;
-    --primary-text-colour: #000000;
-    --primary-bg-onhover-colour: #2d5372;
-    --primary-text-onhover-colour: #ffffff;
-    /* Define secondary colours */
-    --secondary-colour: white;
-    --secondary-bg-colour: #FFF5EE;
-    --secondary-text-colour: #000000;
-    /* Define tertiary colours */
-    --tertiary-colour: white;
-    --tertiary-bg-colour: #FFF5EE;
-    --tertiary-text-colour: #000000;
-    /* Define accent colour */
-    --accent-colour: DodgerBlue;
-}
+/* Import theme */
+@import url("theme/ice-blue/light.css");
+@import url("theme/ice-blue/dark.css");
 
 html{
     font-family: "Roboto", sans-serif, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 12pt;
-    color: var(--primary-text-colour);
+    color: var(--md-sys-color-on-background);
+    background-color: var(--md-sys-color-background);
 }
 
 body {
@@ -35,7 +20,7 @@ body {
 }
 
 .section-title {
-    color: var(--primary-colour);
+    color: var(--md-sys-color-primary);
 }
 
 /* Nav-bar styling */
@@ -50,7 +35,7 @@ body {
     flex-flow: row;
     gap: 1em;
     align-items: center;
-    background: var(--primary-bg-colour);
+    background: var(--md-sys-color-primary);
 }
 
 .nav-bar > div:nth-child(2){
@@ -70,7 +55,6 @@ body {
 
 .nav-link {
     font-style: normal;
-    text-decoration: none;
 }
 
 /* Title on the left side of the nav bar */
@@ -79,13 +63,15 @@ body {
 }
 
 .nav-button{
-    background-color: var(--primary-bg-colour);
     border: none;
     cursor: pointer;
+    background: none;
+    border-radius: 100%;
 }
 
 .nav-link, .nav-button, .nav-title {
-    color: var(--primary-colour);
+    color: var(--md-sys-color-on-primary);
+    text-decoration: none;
 }
 
 .nav-main .nav-link{
@@ -95,9 +81,14 @@ body {
     padding: 8px;
 }
 
-.nav-main .nav-link:hover{
-    color: var(--primary-text-onhover-colour);
-    background-color: var(--primary-bg-onhover-colour);
+.nav-button:hover{
+    color: var(--md-sys-color-on-primary-container);
+    background-color: var(--md-sys-color-primary-container);
+}
+
+.nav-link:hover{
+    color: var(--md-sys-color-on-primary-container);
+    background-color: var(--md-sys-color-primary-container);
 }
 
 /* Sizing for material icons */
@@ -128,9 +119,9 @@ body {
 }
 
 .aboutme-title {
-    color: var(--primary-colour);
+    /* color: var(--md-sys-color-primary); */
 }
 
 .aboutme-description {
-    color: var(--primary-text-colour);
+    /* color: var(--md-sys-color-on-primary); */
 }
