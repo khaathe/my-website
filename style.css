@@ -16,10 +16,10 @@ body {
 }
 
 /* multi-classes selectors */
-/* insert here in case these are needed
+/* insert here in case these are needed */
 
 /* dynamic and state rules (hover, active, ...) */
-/* insert here in case these are needed
+/* insert here in case these are needed */
 
 /*******************************************************************************
 * General rules
@@ -47,10 +47,10 @@ body {
 .material-icons.md-48 { font-size: 48px; }
 
 /* multi-classes selectors */
-/* insert here in case these are needed
+/* insert here in case these are needed */
 
 /* dynamic and state rules (hover, active, ...) */
-/* insert here in case these are needed
+/* insert here in case these are needed */
 
 /*******************************************************************************
 * Nav-bar
@@ -184,7 +184,7 @@ body {
 }
 
 /* multi-classes selectors */
-/* insert here in case these are needed
+/* insert here in case these are needed */
 
 /* dynamic and state rules (hover, active, ...) */
 .aboutme > div:nth-child(1) {
@@ -208,9 +208,6 @@ body {
     flex-flow: column;
     row-gap: 10px;
 }
-.job-title {
-    font-size: larger;
-}
 .job-info {
     display: block;
 }
@@ -220,36 +217,58 @@ body {
 .job-location {
     float: right;
 }
-.job-desc {
-    display: inline;
+
+.interest-list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.interest-item {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px;
+    max-width: 40%;
 }
 
 /* multi-classes selectors */
-/* insert here in case these are needed
+.job-title, .interest-title {
+    color: var(--md-sys-color-tertiary);
+}
+
+.job-desc, .interest-desc {
+    display: inline;
+}
+
 
 /* dynamic and state rules (hover, active, ...) */
-/* insert here in case these are needed
+/* insert here in case these are needed */
 
 /*******************************************************************************
 * Skills
 *******************************************************************************/
 /* css classes */
-/* insert here in case these are needed
+/* insert here in case these are needed */
 
 /* multi-classes selectors */
-/* insert here in case these are needed
+/* insert here in case these are needed */
 
 /* dynamic and state rules (hover, active, ...) */
-/* insert here in case these are needed
+/* insert here in case these are needed */
 
 /*******************************************************************************
 * Contact
 *******************************************************************************/
 /* css classes */
-/* insert here in case these are needed
+/* insert here in case these are needed */
 
 /* multi-classes selectors */
-/* insert here in case these are needed
+/* insert here in case these are needed */
 
 /* dynamic and state rules (hover, active, ...) */
-/* insert here in case these are needed
+/* insert here in case these are needed */
