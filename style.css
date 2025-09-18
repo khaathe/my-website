@@ -267,10 +267,38 @@ body {
 * Contact
 *******************************************************************************/
 /* css classes */
-/* insert here in case these are needed */
+.contact-list {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    color: var(--md-sys-color-on-secondary-container);
+    background-color: var(--md-sys-color-secondary-container);
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    padding: 15px 15px 15px 15px;
+}
+
+.contact-item {
+    font-size: 26pt;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
 
 /* multi-classes selectors */
-/* insert here in case these are needed */
+.contact-list a {
+    color: var(--md-sys-color-on-secondary-container);
+    text-decoration: none;
+    padding: 15px 15px 15px 15px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* dynamic and state rules (hover, active, ...) */
-/* insert here in case these are needed */
+.contact-item a:hover {
+    color: var(--md-sys-color-on-primary);
+    background-color: var(--md-sys-color-primary);
+}
