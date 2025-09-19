@@ -210,7 +210,6 @@ body {
     gap: 5px;
     padding: 15px 15px 15px 15px;
     border-radius: 15px;
-    max-width: 40%;
     background-color: var(--md-sys-color-on-surface-container-lowest);
     color: var(--md-sys-color-on-surface-container);
 }
@@ -229,6 +228,15 @@ body {
     font-size: small;
     color: var(--md-sys-color-tertiary);
     visibility: hidden;
+}
+
+.card-collapse {
+    max-width: 40%;
+}
+
+.card-expand {
+    max-width: 100%;
+    box-shadow: 0px 0px 8px var(--md-sys-color-secondary);
 }
 
 /* multi-classes selectors */

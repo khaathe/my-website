@@ -39,3 +39,19 @@ function toggleLightDarkMode(){
         navThemeIcon.innerHTML = "light_mode"
     }
 }
+
+/**
+ * Method to expand and collapse a card item.
+ * @param {Element to expand/collapse} e 
+ */
+function toggleExpandCard(e){
+    isCard = e.className.includes("card-item")
+    isCollapsed = e.className.includes("card-collapse")
+    if ( isCard && isCollapsed ) {
+        e.className = e.className.replace("card-collapse", "card-expand")
+        e.getElementsByClassName("card-header-info")[0].innerHTML = "Click to collapse"
+    } else {
+        e.className = e.className.replace("card-expand", "card-collapse")
+        e.getElementsByClassName("card-header-info")[0].innerHTML = "Click to expand"
+    }
+}
