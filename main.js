@@ -55,3 +55,20 @@ function toggleExpandCard(e){
         e.getElementsByClassName("card-header-info")[0].innerHTML = "Click to expand"
     }
 }
+
+/**
+ * Class to make reusable card components
+ */
+class SimpleCard extends HTMLElement {
+    constructor() {
+        super();
+        let template = document.getElementById("simple-card");
+        let templateContent = template.content;
+
+        const shadowRoot = this.attachShadow({ mode: "open" });
+        shadowRoot.appendChild(templateContent.cloneNode(true));
+    }
+}
+
+/* Define simple card html-tag */
+customElements.define("simple-card", SimpleCard, );
