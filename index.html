@@ -36,12 +36,16 @@
         <link rel="stylesheet" href="style.css" />
         <div class="card-item card-shadow card-hover card-collapse" onclick="toggleExpandCard(this)">
             <div class="card-header">
-                <h3 class="card-header-title">Item title</h3>
+                <h3 class="card-header-title">
+                    <slot name="card-title">Card title</slot>
+                </h3>
                 <p class="card-header-info">Click to expand</p>
             </div>
             <div>
                 <span class="card-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum fermentum ipsum, id ornare sem mattis id. Quisque sed dolor sit amet tellus condimentum iaculis. Quisque gravida laoreet sapien, nec euismod eros viverra eget. Phasellus sit amet rhoncus nibh. Sed non ipsum est. Nunc rutrum finibus massa quis semper. Duis nec neque cursus, ultrices tellus at, lacinia erat. Aenean at eros ligula. Fusce bibendum eu velit in molestie.
+                    <slot name="card-desc">
+                        Sample card description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rutrum fermentum ipsum, id ornare sem mattis id. Quisque sed dolor sit amet tellus condimentum iaculis. Quisque gravida laoreet sapien, nec euismod eros viverra eget. Phasellus sit amet rhoncus nibh. Sed non ipsum est. Nunc rutrum finibus massa quis semper. Duis nec neque cursus, ultrices tellus at, lacinia erat. Aenean at eros ligula. Fusce bibendum eu velit in molestie.
+                    </slot>
                 </span>
             </div>
         </div>
