@@ -37,10 +37,6 @@ body {
     padding: 15px 5vw 15px 5vw;
 }
 
-.card {
-    box-shadow: 4px 4px 8px var(--md-sys-color-shadow);
-}
-
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
@@ -192,33 +188,14 @@ body {
 }
 
 /*******************************************************************************
-* Research
+* Card items
 *******************************************************************************/
 /* css classes */
-.background-list {
-    display: flex;
-    flex-flow: column;
-    row-gap: 25px;
-}
-.background-item {
-    padding: 15px 15px 15px 15px;
-    background-color: var(--md-sys-color-surface-bright);
-    color: var(--md-sys-color-on-surface-container);
-    display: flex;
-    flex-flow: column;
-    row-gap: 10px;
-}
-.job-info {
-    display: block;
-}
-.job-date {
-    float: left;
-}
-.job-location {
-    float: right;
+.card-shadow {
+    box-shadow: 0px 0px 8px -5px var(--md-sys-color-shadow);
 }
 
-.interest-list {
+.card-list {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
@@ -227,63 +204,49 @@ body {
     gap: 50px;
 }
 
-.interest-item {
+.card-item {
     display: flex;
     flex-flow: column;
     gap: 5px;
     padding: 15px 15px 15px 15px;
     border-radius: 15px;
     max-width: 40%;
-    background-color: var(--md-sys-color-surface-bright);
+    background-color: var(--md-sys-color-on-surface-container-lowest);
     color: var(--md-sys-color-on-surface-container);
 }
 
-/* multi-classes selectors */
-.job-title, .interest-title {
-    color: var(--md-sys-color-tertiary);
-}
-
-.job-desc, .interest-desc {
-    display: inline;
-}
-
-
-/* dynamic and state rules (hover, active, ...) */
-/* insert here in case these are needed */
-
-/*******************************************************************************
-* Skills
-*******************************************************************************/
-/* css classes */
-.skill-list {
+.card-header {
     display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-between;
 }
 
-.skill-item {
-    display: flex;
-    flex-flow: column;
-    gap: 5px;
-    padding: 15px 15px 15px 15px;
-    border-radius: 15px;
-    max-width: 40%;
-    background-color: var(--md-sys-color-surface-bright);
-    color: var(--md-sys-color-on-surface-container);
+.card-header-title {
+    color: var(--md-sys-color-on-background);
 }
 
-.skill-title {
+.card-header-info {
+    font-size: small;
     color: var(--md-sys-color-tertiary);
+    visibility: hidden;
 }
 
 /* multi-classes selectors */
 /* insert here in case these are needed */
 
 /* dynamic and state rules (hover, active, ...) */
-/* insert here in case these are needed */
+.card-hover:hover .card-header-title {
+    color: var(--md-sys-color-primary);
+}
+
+.card-hover:hover .card-header-info {
+    color: var(--md-sys-color-secondary);
+    visibility: visible;
+}
+
+.card-item.card-hover:hover{
+    box-shadow: 0px 0px 8px var(--md-sys-color-primary);
+}
 
 /*******************************************************************************
 * Contact
@@ -293,7 +256,7 @@ body {
     display: flex;
     flex-flow: column;
     gap: 15px;
-    color: var(--md-sys-color-on-secondary-container);
+    color: var(--md-sys-color-on-surface-container);
     background-color: var(--md-sys-color-secondary-container);
     align-items: center;
     justify-content: center;
@@ -310,7 +273,7 @@ body {
 
 /* multi-classes selectors */
 .contact-list a {
-    color: var(--md-sys-color-on-secondary-container);
+    color: var(--md-sys-color-on-surface-container);
     text-decoration: none;
     padding: 15px 15px 15px 15px;
     border-radius: 15px;
