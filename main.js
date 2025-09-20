@@ -16,13 +16,12 @@ function toggleNavbar() {
     if ( !matchMedia("(max-width: 800px)").matches )  {
         return;
     }
-    if (navbar.className === "nav-bar") {
-        navbar.className += " compact";
-        navToggleIcon.innerHTML = "close"
-    } else {
-        navbar.className = "nav-bar";
+    if (navbar.classList.contains("compact")) {
         navToggleIcon.innerHTML = "menu"
+    } else {
+        navToggleIcon.innerHTML = "close"
     }
+    navbar.classList.toggle("compact")
 }
 
 /**
