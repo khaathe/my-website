@@ -202,6 +202,8 @@ body {
 
 .aboutme-picture {
     border-radius: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 /* multi-classes selectors */
@@ -210,6 +212,22 @@ body {
 /* dynamic and state rules (hover, active, ...) */
 .aboutme > div:nth-child(1) {
     flex-grow: 2;
+}
+
+@media screen and (max-width: 1000px) {
+    .aboutme {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-items: center;
+        gap: 10px;
+    }
+    .aboutme-main, .aboutme-right {
+        width: 100%;
+    }
+    .aboutme-right {
+        justify-content: center;
+    }
 }
 
 /*******************************************************************************
