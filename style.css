@@ -41,22 +41,41 @@ body {
     box-shadow: 4px 4px 8px var(--md-sys-color-shadow);
 }
 
+.from-bottom {
+    transform: translateY(10%);
+}
+
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
 /* multi-classes selectors */
-/* insert here in case these are needed */
+.show-on-scroll.hidden {
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 1s ease-in-out;
+}
 
+.show-on-scroll.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+    transform: translateY(0);
+}
 /* dynamic and state rules (hover, active, ...) */
-/* insert here in case these are needed */
+@media(prefers-reduced-motion) {
+    .show-on-scroll.hidden {
+        transition: none;
+    }
+}
 
 /*******************************************************************************
 * Nav-bar
 *******************************************************************************/
 /* css classes */
 .nav-bar{
+    z-index: 999; /* ensure the nav-bar is on top of everything */
     position: sticky; /* Set the navbar to fixed position */    
     top: 0; /* Position the navbar at the top of the page */
     padding: 2vw 2vw 1vw 1vw;
