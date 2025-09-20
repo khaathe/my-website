@@ -177,8 +177,6 @@ body {
     display: grid;
     grid-template-columns: 6fr 4fr;
     column-gap: 5px 50px;
-    background: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
     border-radius: 25px;
     padding: 15px 15px 15px 15px;
 }
@@ -186,6 +184,7 @@ body {
 .aboutme-main {
     padding: 6px;
     padding-right: 12px;
+    font-size: 1.2rem;
 }
 
 .aboutme-right {
@@ -194,7 +193,8 @@ body {
 }
 
 .aboutme-title {
-    color: var(--md-sys-color-on-primary);
+    color: var(--md-sys-color-primary);
+    font-size: 4rem;
 }
 
 /* Used in html, use this for styling the description in 'aboutme' */
@@ -210,10 +210,6 @@ body {
 /* insert here in case these are needed */
 
 /* dynamic and state rules (hover, active, ...) */
-.aboutme > div:nth-child(1) {
-    flex-grow: 2;
-}
-
 @media screen and (max-width: 1000px) {
     .aboutme {
         display: flex;
