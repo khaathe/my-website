@@ -5,7 +5,7 @@
 /* css classes */
 html{
     font-family: "Roboto", sans-serif, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 12pt;
+    font-size: 16px;
     color: var(--md-sys-color-on-background);
     background-color: var(--md-sys-color-background);
 }
@@ -66,17 +66,21 @@ body {
     gap: 1em;
     align-items: center;
     background: var(--md-sys-color-primary);
+    height: 5vh;
 }
 
-.nav-main {
+.nav-container {
+    list-style: none;
     display: flex;
+    padding: 5px;
+    margin: 0;
+    height: inherit;
+    justify-items: center;
     align-items: center;
 }
 
-.nav-left, .nav-main, .nav-right {
-    height: inherit;
-    justify-content: center;
-    align-content: center;
+.nav-main {
+    gap: 15px;
 }
 
 .nav-link {
@@ -84,14 +88,19 @@ body {
 }
 
 .nav-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .nav-button{
     border: none;
     cursor: pointer;
     background: none;
-    border-radius: 100%;
+}
+
+.nav-right {
+    padding: 0;
+    margin: 0;
+    height: 100%;
 }
 
 /* multi-classes selectors */
@@ -100,7 +109,7 @@ body {
     text-decoration: none;
 }
 
-.nav-main .nav-link{
+.nav-container .nav-link{
     display: inline-block;
     text-align: center;
     border-radius: 5px;
@@ -112,9 +121,9 @@ body {
     flex-grow: 2;
 }
 
-.nav-button:hover{
-    color: var(--md-sys-color-on-primary-container);
-    background-color: var(--md-sys-color-primary-container);
+.nav-button:hover, .nav-link:hover{
+    transition: 100ms ease-in-out;
+    scale: 1.2;
 }
 
 .nav-link:hover{

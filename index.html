@@ -27,16 +27,24 @@
         <link href="assets/fontawesome/fontawesome-free-7.0.1-web/css/sharp-duotone-thin.css" rel="stylesheet" />
     </head>
     <nav id="nav-bar" class="nav-bar">
-        <div class="nav-left">
-            <a class="nav-title" href="/">Kévin SPINICCI</a>
+        <div class="nav-left nav-container">
+            <a class="nav-title nav-link" href="/">Kévin SPINICCI</a>
         </div>
-        <div class="nav-main">
-            <a class="nav-link" onclick="toggleNavbar()" href="#aboutme" title="Details about me an my interest.">About me</a>
-            <a class="nav-link" onclick="toggleNavbar()" href="#research">Research</a>
-            <a class="nav-link" onclick="toggleNavbar()" href="#skills">Skills</a>
-            <a class="nav-link" onclick="toggleNavbar()" href="#contact">Contact</a>
-        </div>
-        <div class="nav-right">
+        <ul class="nav-main nav-container">
+            <li>
+                <a class="nav-link" onclick="toggleNavbar()" href="#aboutme" title="Details about me an my interest.">About me</a>
+            </li>
+            <li>
+                <a class="nav-link" onclick="toggleNavbar()" href="#research">Research</a>
+            </li>
+            <li>
+                <a class="nav-link" onclick="toggleNavbar()" href="#skills">Skills</a>
+            </li>
+            <li>
+                <a class="nav-link" onclick="toggleNavbar()" href="#contact">Contact</a>
+            </li>
+        </ul>
+        <div class="nav-right nav-container">
             <button class="nav-button" onclick="toggleLightDarkMode()">
                 <i id="nav-theme-icon" class="material-symbols-outlined material-icons md-36">light_mode</i>
             </button>
